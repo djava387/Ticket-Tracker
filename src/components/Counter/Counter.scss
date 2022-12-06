@@ -1,0 +1,40 @@
+.counter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(176, 198, 239);
+  //   background-color: rgb(235, 139, 115);
+  width: 140px;
+  margin: 0 auto;
+  padding: 8px;
+  border: solid black 1px;
+}
+h3 {
+  margin: 0;
+  font-weight: normal;
+}
+.counter-value {
+  margin-top: 23px;
+  color: #2d2d2d;
+  font-size: 30px;
+}
+.buttons {
+  margin: 0 auto;
+  margin-top: 23px;
+  display: flex;
+  justify-content: center;
+}
+button {
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  border: none;
+  font-size: 21px;
+  background-color: #2c2f3d;
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.75;
+  }
+}
