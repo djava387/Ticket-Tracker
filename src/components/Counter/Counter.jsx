@@ -4,16 +4,14 @@ import "./Counter.scss";
 const Counter = () => {
   const [counter, setCounter] = useState(0);
 
-  const increase = () => {
-    setCounter(counter + 1);
-  };
+  const increase = () => setCounter((prevCounter) => prevCounter + 1);
 
   const decrease = () => {
     if (counter === 0) {
       alert("Your ticket cannot be below zero!");
       return;
     }
-    setCounter(counter - 1);
+    setCounter((prevCounter) => prevCounter - 1);
   };
 
   return (
@@ -24,13 +22,14 @@ const Counter = () => {
       </div>
       <div className="buttons">
         <div>
-          <button onClick={() => increase()}>+</button>
+          <button onClick={increase}>+</button>
         </div>
         <div>
-          <button onClick={() => decrease()}>-</button>
+          <button onClick={decrease}>-</button>
         </div>
       </div>
     </div>
   );
 };
+
 export default Counter;
